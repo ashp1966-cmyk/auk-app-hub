@@ -1,0 +1,464 @@
+<!-- ============================================================
+     AUK App Hub — EMBEDDABLE FRAGMENT
+     Paste this whole block into a "Custom HTML" / "HTML" widget
+     on your site (Elementor's HTML widget, a WordPress Custom HTML
+     block, etc.) — NOT into a plain rich-text/visual editor field.
+     Do not add this inside another <style> or <head> block.
+     ============================================================ -->
+<div id="auk-app-hub-embed">
+<style>
+  #auk-app-hub-embed{
+    --ahe-navy:#132a45;
+    --ahe-navy-2:#1c3a5c;
+    --ahe-navy-3:#254a73;
+    --ahe-paper:#f5f7fa;
+    --ahe-card:#ffffff;
+    --ahe-ink:#132a3a;
+    --ahe-ink-soft:#5b6b7c;
+    --ahe-line:#e3e8ee;
+    --ahe-accent:#2f6fed;
+    --ahe-accent-soft:#eaf0ff;
+    --ahe-radius:12px;
+    --ahe-shadow:0 1px 2px rgba(19,42,69,.06), 0 6px 16px rgba(19,42,69,.06);
+    display:block !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important;
+    background:var(--ahe-paper) !important;
+    color:var(--ahe-ink) !important;
+    line-height:1.5 !important;
+    text-align:left !important;
+  }
+  #auk-app-hub-embed *{
+    box-sizing:border-box !important;
+    font-family:inherit;
+  }
+  #auk-app-hub-embed ul, #auk-app-hub-embed ol{ margin:0 !important; padding:0 !important; list-style:none !important; }
+  #auk-app-hub-embed .ahe-header{
+    background:linear-gradient(135deg,var(--ahe-navy) 0%, var(--ahe-navy-3) 100%) !important;
+    color:#fff !important;
+    padding:28px 32px 22px !important;
+  }
+  #auk-app-hub-embed .ahe-header-inner{
+    max-width:1180px !important;
+    margin:0 auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:12px !important;
+  }
+  #auk-app-hub-embed .ahe-eyebrow{
+    font-size:11.5px !important;
+    letter-spacing:.14em !important;
+    text-transform:uppercase !important;
+    color:#a9c2e6 !important;
+    font-weight:600 !important;
+    line-height:1.4 !important;
+  }
+  #auk-app-hub-embed h1.ahe-title{
+    margin:0 !important;
+    padding:0 !important;
+    font-size:24px !important;
+    font-weight:700 !important;
+    letter-spacing:-.01em !important;
+    color:#cfe0f7 !important;
+    line-height:1.3 !important;
+    border:none !important;
+    background:none !important;
+  }
+  #auk-app-hub-embed .ahe-sub{
+    color:#c7d6ea !important;
+    font-size:13.5px !important;
+    max-width:640px !important;
+    line-height:1.5 !important;
+    margin:0 !important;
+  }
+  #auk-app-hub-embed .ahe-top-row{
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:space-between !important;
+    gap:12px !important;
+    flex-wrap:wrap !important;
+  }
+  #auk-app-hub-embed a.ahe-site-link{
+    display:flex !important;
+    align-items:center !important;
+    gap:7px !important;
+    padding:8px 14px !important;
+    border-radius:999px !important;
+    background:#fff !important;
+    color:var(--ahe-navy-2) !important;
+    text-decoration:none !important;
+    font-size:13px !important;
+    font-weight:600 !important;
+    box-shadow:0 4px 12px rgba(0,0,0,.15) !important;
+    transition:transform .12s ease, box-shadow .12s ease !important;
+    white-space:nowrap !important;
+    border:none !important;
+  }
+  #auk-app-hub-embed a.ahe-site-link svg{ width:15px !important; height:15px !important; flex:0 0 auto !important; }
+  #auk-app-hub-embed a.ahe-site-link:hover{
+    transform:translateY(-1px) !important;
+    box-shadow:0 6px 16px rgba(0,0,0,.2) !important;
+    color:var(--ahe-navy-2) !important;
+  }
+  #auk-app-hub-embed .ahe-site-link-go{ font-size:12px !important; color:var(--ahe-accent) !important; }
+  #auk-app-hub-embed .ahe-search-row{
+    display:flex !important;
+    gap:10px !important;
+    margin-top:4px !important;
+    flex-wrap:wrap !important;
+  }
+  #auk-app-hub-embed input#ahe-search{
+    flex:1 !important;
+    min-width:220px !important;
+    padding:9px 14px !important;
+    border-radius:9px !important;
+    border:1px solid rgba(255,255,255,.18) !important;
+    background:rgba(255,255,255,.08) !important;
+    color:#fff !important;
+    font-size:13.5px !important;
+    outline:none !important;
+    height:auto !important;
+    box-shadow:none !important;
+    margin:0 !important;
+  }
+  #auk-app-hub-embed input#ahe-search::placeholder{color:#9fb4cf !important;}
+  #auk-app-hub-embed input#ahe-search:focus{background:rgba(255,255,255,.14) !important; border-color:rgba(255,255,255,.35) !important;}
+  #auk-app-hub-embed .ahe-stat-chip{
+    display:flex !important;
+    align-items:center !important;
+    gap:6px !important;
+    padding:9px 14px !important;
+    border-radius:9px !important;
+    background:rgba(255,255,255,.08) !important;
+    border:1px solid rgba(255,255,255,.14) !important;
+    font-size:12.5px !important;
+    color:#c7d6ea !important;
+    white-space:nowrap !important;
+  }
+  #auk-app-hub-embed .ahe-stat-chip b{color:#fff !important; font-size:13.5px !important; font-weight:700 !important;}
+
+  #auk-app-hub-embed .ahe-main{
+    max-width:1180px !important;
+    margin:0 auto !important;
+    padding:26px 32px 50px !important;
+  }
+  #auk-app-hub-embed .ahe-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    align-items:start !important;
+    gap:18px !important;
+  }
+  #auk-app-hub-embed a.ahe-card{
+    background:var(--ahe-card) !important;
+    border:1px solid var(--ahe-line) !important;
+    border-radius:var(--ahe-radius) !important;
+    padding:14px !important;
+    box-shadow:var(--ahe-shadow) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:10px !important;
+    text-decoration:none !important;
+    color:inherit !important;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease !important;
+  }
+  #auk-app-hub-embed a.ahe-card:hover{
+    transform:translateY(-2px) !important;
+    border-color:var(--ahe-accent) !important;
+    box-shadow:0 4px 10px rgba(19,42,69,.08), 0 12px 26px rgba(19,42,69,.1) !important;
+  }
+  #auk-app-hub-embed .ahe-thumb{
+    height:82px !important;
+    border-radius:8px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    position:relative !important;
+    overflow:hidden !important;
+  }
+  #auk-app-hub-embed .ahe-thumb svg{ width:32px !important; height:32px !important; position:relative !important; z-index:1 !important; }
+  #auk-app-hub-embed .ahe-thumb::after{
+    content:"" !important;
+    position:absolute !important; inset:0 !important;
+    background:radial-gradient(120% 140% at 15% 15%, rgba(255,255,255,.35), transparent 60%) !important;
+  }
+  #auk-app-hub-embed .ahe-card-body{ display:flex !important; flex-direction:column !important; gap:5px !important; flex:1 !important; }
+  #auk-app-hub-embed .ahe-badge{
+    display:inline-block !important;
+    font-size:9.5px !important;
+    font-weight:700 !important;
+    letter-spacing:.04em !important;
+    text-transform:uppercase !important;
+    padding:2px 7px !important;
+    border-radius:999px !important;
+    background:var(--ahe-accent-soft) !important;
+    color:var(--ahe-accent) !important;
+    width:fit-content !important;
+    line-height:1.6 !important;
+    margin:0 !important;
+  }
+  #auk-app-hub-embed .ahe-card-top{
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:space-between !important;
+    gap:6px !important;
+  }
+  #auk-app-hub-embed .ahe-card-title{
+    font-size:14px !important;
+    font-weight:700 !important;
+    color:var(--ahe-ink) !important;
+    line-height:1.25 !important;
+    margin:0 !important;
+  }
+  #auk-app-hub-embed .ahe-go{
+    flex:0 0 auto !important;
+    width:19px !important; height:19px !important;
+    border-radius:50% !important;
+    background:var(--ahe-accent-soft) !important;
+    color:var(--ahe-accent) !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+    font-size:11px !important;
+    transition:background .12s ease !important;
+  }
+  #auk-app-hub-embed a.ahe-card:hover .ahe-go{background:var(--ahe-accent) !important; color:#fff !important;}
+  #auk-app-hub-embed .ahe-card-desc{
+    font-size:11.5px !important;
+    color:var(--ahe-ink-soft) !important;
+    line-height:1.5 !important;
+    flex:1 !important;
+    margin:0 !important;
+  }
+  #auk-app-hub-embed .ahe-card-url{
+    font-size:10.5px !important;
+    color:#8b9bad !important;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace !important;
+    word-break:break-all !important;
+    border-top:1px dashed var(--ahe-line) !important;
+    padding-top:7px !important;
+    margin-top:2px !important;
+  }
+  #auk-app-hub-embed .ahe-empty-state{
+    display:none;
+    text-align:center !important;
+    padding:50px 20px !important;
+    color:var(--ahe-ink-soft) !important;
+  }
+  @media (max-width:900px){
+    #auk-app-hub-embed .ahe-grid{grid-template-columns:repeat(2, 1fr) !important;}
+  }
+  @media (max-width:600px){
+    #auk-app-hub-embed .ahe-header{padding:22px 18px 18px !important;}
+    #auk-app-hub-embed .ahe-main{padding:18px 18px 40px !important;}
+    #auk-app-hub-embed .ahe-grid{grid-template-columns:1fr !important;}
+  }
+</style>
+
+<header class="ahe-header">
+  <div class="ahe-header-inner">
+    <div class="ahe-top-row">
+      <div>
+        <div class="ahe-eyebrow">AUK Marine &amp; Mining</div>
+        <h1 class="ahe-title">App Hub</h1>
+      </div>
+      <a class="ahe-site-link" href="https://auk-maritime.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+        auk-maritime.com
+        <span class="ahe-site-link-go">↗</span>
+      </a>
+    </div>
+    <div class="ahe-sub">One place to open every AI product and platform built for AUK.</div>
+    <div class="ahe-search-row">
+      <input id="ahe-search" type="text" placeholder="Search apps — e.g. inspection, port, logistics…" autocomplete="off">
+      <div class="ahe-stat-chip"><b id="ahe-visible-count">13</b>&nbsp;apps</div>
+    </div>
+  </div>
+</header>
+
+<main class="ahe-main">
+  <div class="ahe-grid" id="ahe-grid">
+
+    <a class="ahe-card" href="https://ship-inspection-platform-weld.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c1.5 1.2 3.3 1.8 5 1.8s3.5-.6 5-1.8c1.5 1.2 3.3 1.8 5 1.8"/><path d="M4 13h16l-1.5 4H5.5L4 13Z"/><path d="M12 13V5l4 2-4 2"/><path d="M8 13V9"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Ships &amp; Inspections</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Ship Inspection Platform</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Digital inspection tool for cargo and condition surveys, run in a RightShip / PSC / Pre-SIRE style. Findings are logged against a structured deficiency register with a schema-backed history, so nothing gets lost between visits and follow-up items stay tracked to close-out.</div>
+        <div class="ahe-card-url">ship-inspection-platform-weld.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://ship-audit-five.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#0f766e,#134e4a)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Ships &amp; Inspections</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Ship Audit</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Runs formal ship audits end to end. Build out question sets, edit or retire questions as standards change, and every finding lands in a dedicated register so nothing slips through between the audit and the corrective action.</div>
+        <div class="ahe-card-url">ship-audit-five.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://commercial.auk-maritime.com" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#0369a1,#0c4a6e)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Commercial Shipping</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Ship Feasibility Platform</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Advanced commercial shipping feasibility — covers bulk, container and tanker fixtures alongside ship purchase feasibility. Runs NPV, IRR and DSCR against loan structures, OPEX assumptions and drydocking schedules, sharing one costing engine across vessel types so numbers stay consistent.</div>
+        <div class="ahe-card-url">commercial.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://auk-berth-board.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#1d4ed8,#1e3a8a)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Port</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Berth Board</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">A berth planning board that keeps vessel calls, contact directories and P&amp;I club details together in one view, so ops teams can see who's berthing where without digging through separate spreadsheets.</div>
+        <div class="ahe-card-url">auk-berth-board.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://port-capacity-platform.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#2563eb,#1e40af)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Port</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Port Capacity Platform</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Tracks port throughput and capacity utilisation, giving a live read on how much room a port or terminal has for incoming vessels and cargo — now carrying full AUK branding and a hardened server-side session.</div>
+        <div class="ahe-card-url">port-capacity-platform.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://technical.auk-maritime.com/" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#c2622d,#9a4a1f)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 1 5.4-5.4l-2.5 2.5-2-2 2.5-2.5Z"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Maintenance</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Technical Management System (PMS)</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">A full technical management system behind AUKPMS-AI / AUKMIND — planned maintenance and equipment registers, purchasing, training, compliance, HSQE, crew, operations and risk assessment, all in one place. Now powered by AI-driven maintenance prediction and risk assessment.</div>
+        <div class="ahe-card-url">technical.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://logistics.auk-maritime.com/" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#6d4aff,#4c2fcf)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="10" rx="1"/><path d="M16 10h3l4 4v3h-7"/><circle cx="6" cy="19" r="2"/><circle cx="17.5" cy="19" r="2"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Logistics &amp; Trade</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Logistics Costing</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">The live freight &amp; logistics costing engine — builds Incoterm-based landed-cost quotes across sea, air and road modes, with a full FOB-to-DDP cost chain, route comparison and saved quotes. Now generates order requirements straight from inventory and demand levels, alongside reporting and a port-time ledger to track cargo and vessel dwell time.</div>
+        <div class="ahe-card-url">logistics.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://zim-metal.auk-maritime.com" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#a15c07,#7c4405)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20l4-11 3 6 2-4 3 9"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Mining &amp; Metals</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Zim Metals Model</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">An investor-grade due diligence model for the integrated Zimbabwe metals platform — scrapyard, chrome mine and ULC ferrochrome production — with secured partner login for stakeholders reviewing the numbers. Pairs with AUKMETALS-AI.</div>
+        <div class="ahe-card-url">zim-metal.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://auk-coastal-risk-model.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#d64545,#a82f2f)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Risk &amp; Coastal</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Coastal Risk Model</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Models coastal and shipping risk along the South African coastline, pulling in live vessel traffic to support the risk &amp; response briefings that power AUKWATCH-AI's port optimisation module.</div>
+        <div class="ahe-card-url">auk-coastal-risk-model.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://wealth.auk-maritime.com" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#1f9d55,#137339)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="7" cy="14.5" r="1.4" fill="#fff" stroke="none"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Finance</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Wealth Engine</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">A wealth and financial tracking dashboard (Track A view) for keeping an eye on holdings and performance at a glance, tuned for readability across screen sizes.</div>
+        <div class="ahe-card-url">wealth.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://marketing.auk-maritime.com/" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#c23b7a,#96285d)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v3a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15 8a4 4 0 0 1 0 8"/><path d="M18 5a8 8 0 0 1 0 14"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Marketing &amp; Business</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Marketing Model</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">Drives the marketing &amp; business-consulting front end behind AUKBIZPILOT-AI — now with advanced campaign management and prospecting, synced with HubSpot for CRM. Hardened with an error boundary so a crash in one tab or widget can no longer take the whole app down mid-session.</div>
+        <div class="ahe-card-url">marketing.auk-maritime.com</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://psych-dev-model.vercel.app" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a5.5 5.5 0 0 0-5 8.7A5 5 0 0 0 8 20h1v-6H7.5a2.5 2.5 0 0 1 0-5H9"/><path d="M14.5 2a5.5 5.5 0 0 1 5 8.7A5 5 0 0 1 16 20h-1v-6h1.5a2.5 2.5 0 0 0 0-5H15"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Marketing &amp; Business</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">Psych Dev Model</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">A psychology and personal-development model underpinning AUKBEING-AI — built around how people see, model and shape their world, for the "generating awareness" training content on the main site.</div>
+        <div class="ahe-card-url">psych-dev-model.vercel.app</div>
+      </div>
+    </a>
+
+    <a class="ahe-card" href="https://training.auk-maritime.com" target="_blank" rel="noopener">
+      <div class="ahe-thumb" style="background:linear-gradient(135deg,#4338ca,#312e81)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+      </div>
+      <div class="ahe-card-body">
+        <span class="ahe-badge">Training</span>
+        <div class="ahe-card-top"><span class="ahe-card-title">AUK Marine Training</span><span class="ahe-go">↗</span></div>
+        <div class="ahe-card-desc">The LMS behind AUK's certificated training — RightShip/PSC prep, ISM/ISPS/MLC, HAZMAT, BRM/HELM and more, hybrid online/virtual/onsite. Handles enrolment and payment, and now redirects learners straight to course content, skipping payment if they're already enrolled.</div>
+        <div class="ahe-card-url">training.auk-maritime.com</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="ahe-empty-state" id="ahe-empty-state">No apps match your search.</div>
+</main>
+</div>
+
+<script>
+(function(){
+  var search = document.getElementById('ahe-search');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#auk-app-hub-embed .ahe-card'));
+  var visibleCount = document.getElementById('ahe-visible-count');
+  var emptyState = document.getElementById('ahe-empty-state');
+  if(!search) return;
+
+  function normalize(s){ return s.toLowerCase(); }
+
+  search.addEventListener('input', function(){
+    var q = normalize(search.value.trim());
+    var total = 0;
+    cards.forEach(function(card){
+      var match = q === '' || normalize(card.textContent).indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) total++;
+    });
+    visibleCount.textContent = total;
+    emptyState.style.display = total === 0 ? 'block' : 'none';
+  });
+})();
+</script>
