@@ -214,16 +214,18 @@
     padding-top:7px;
     margin-top:2px;
   }
-  footer{
+  .credit-bar{
     max-width:1180px;
     margin:0 auto;
-    padding:0 32px 36px;
+    padding:9px 32px;
     color:var(--ink-soft);
-    font-size:12px;
+    font-size:11.5px;
     line-height:1.6;
+    background:#fff;
+    border-bottom:1px solid var(--line);
   }
-  footer a{color:var(--accent);}
-  footer strong{color:var(--ink);}
+  .credit-bar a{color:var(--accent);}
+  .credit-bar strong{color:var(--ink);}
   .empty-state{
     display:none;
     text-align:center;
@@ -236,12 +238,14 @@
   @media (max-width:600px){
     header{padding:22px 18px 18px;}
     main{padding:18px 18px 40px;}
-    footer{padding:0 18px 28px;}
+    .credit-bar{padding:8px 18px;}
     .grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
+
+<div class="credit-bar"><strong>Developed by Capt. Ashwani Pathak</strong> — Technical Founder (AI-Augmented) and Maritime, Mining, Logistics, Education &amp; Metal Manufacturing Executive. Architected and shipped this 15-app operational SaaS suite — spanning compliance, coastal risk assessment, port optimisation, berthing delays, logistics optimisation, technical management, commercial feasibility and fixtures and financial modeling — for AUK Marine &amp; Mining using AI.</div>
 
 <header>
   <div class="header-inner">
@@ -439,8 +443,6 @@
 
   <div class="empty-state" id="empty-state">No apps match your search.</div>
 </main>
-
-<footer><strong>Developed by Capt. Ashwani Pathak</strong> — Technical Founder (AI-Augmented) and Maritime, Mining, Logistics, Education &amp; Metal Manufacturing Executive. Architected and shipped this 15-app operational SaaS suite — spanning compliance, technical management, logistics, commercial feasibility and financial modeling — for AUK Marine &amp; Mining using Claude Code.</footer>
 
 <script>
   const search = document.getElementById('search');
